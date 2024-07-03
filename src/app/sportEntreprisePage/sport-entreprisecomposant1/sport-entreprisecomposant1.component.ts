@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Propritaire } from 'src/app/models/modelPropritaireDeStade/Propritaire.model';
+import { SportEntrepriseService } from 'src/app/services/serviceSportEntreprisePage/sport-entreprise.service';
 
 @Component({
   selector: 'app-sport-entreprisecomposant1',
@@ -8,14 +10,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SportEntreprisecomposant1Component implements OnInit {
   public sportEntreprise!: FormGroup;
-  constructor(private formBuilder: FormBuilder) {}
+  public selectedLogo!: File ;
+  public selectedLogoUrl!: string | ArrayBuffer | null| undefined ;
+  constructor(private formBuilder: FormBuilder,private SportEntrepriseService:SportEntrepriseService) {}
 
   ngOnInit() {
     this.sportEntreprise = this.formBuilder.group({
-      Entreprise: this.formBuilder.control('', [
+      nom: this.formBuilder.control('', [
         Validators.required,
       ]),
-      Responsable: this.formBuilder.control('', [
+      prenom: this.formBuilder.control('', [
         Validators.required,
         Validators.pattern('^[a-zA-Z]+$'),
       ]),
@@ -27,9 +31,43 @@ export class SportEntreprisecomposant1Component implements OnInit {
         Validators.required,
         Validators.pattern('^[0-9]{8}$'),
       ]),
-      ActivitéSportive: this.formBuilder.control('', Validators.required),
+      activiteSportive: this.formBuilder.control('', Validators.required),
+
+      entrepriseee: this.formBuilder.control('', [
+        Validators.required,
+        Validators.pattern('^[a-zA-Z]+$'),
+      ]),
     });
   }
+  public fileChangeLogo(event:any)
+  {
+    this.selectedLogo=event.target.files[0]
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.selectedLogoUrl = e.target?.result;
+    };
+    reader.readAsDataURL(this.selectedLogo);
+  }
+
+  signupPropritaire(){
+    let Propritaire:Propritaire=this.sportEntreprise.value
+    const uploadData = new FormData();
+    uploadData.append('propritaireDeStadeRequestDTO',JSON.stringify(Propritaire));
+    uploadData.append('logo', this.selectedLogo, this.selectedLogo.name);
+
+    this.SportEntrepriseService.SignupPropritaire(uploadData).subscribe({
+      next: data => {
+      },
+      error: error => {
+        console.error('Error:', error);
+      }
+    });
+
+
+  }
+
+
+
   getErrorsMessage(fieldName: string, error: any): string {
     if (error['required']) {
       return fieldName + ' obligatoire';

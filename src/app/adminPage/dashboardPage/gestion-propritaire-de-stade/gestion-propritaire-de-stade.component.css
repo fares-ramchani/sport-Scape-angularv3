@@ -1,0 +1,12 @@
+.ima1:hover{
+    background-color: rgba(19, 209, 19, 0.104);
+    cursor: pointer;
+}
+.ima2:hover{
+    background-color: rgba(255, 0, 0, 0.142);
+    cursor: pointer;
+}
+.ima3:hover{
+    background-color: rgba(43, 139, 235, 0.132);
+    cursor: pointer;
+}

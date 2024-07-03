@@ -3,21 +3,27 @@
             
             <div class="container" id="container">
                 <div class="form-container sign-in-container">
-                    <form role="form">
+                    <form role="form" [formGroup]="formLogin" (ngSubmit)="login1()">
                         <h1>Se connecter</h1>
                         <div class="social-container">
-                            <button class="button" style="display: flex; width: 100%; justify-content: center;" >
+                            <a href="{{url}}" class="bouttom" style="display: flex; width: 100%; justify-content: center;">
+                        
                                 <img  src="../../../assets/images/imagesloginePage/google-icon.png" width="20px"  alt="" style="margin-right: 10px;">
                                Google
 
-                            </button>
+                            
+                        </a>
                            
                         </div>
                         <span>ou utilisez votre compte</span>
+                       
                         <input type="text" placeholder="username" formControlName="username" required />
-                        
+                        <small *ngIf="formLogin.controls['username'].errors && formLogin.controls['username'].touched" class="text-danger">
+                            {{getErrorsMessage('username',formLogin.controls['username'].errors)}}</small>
                       
                         <input type="password" placeholder="password" formControlName="password" required />
+                        <small *ngIf="formLogin.controls['password'].errors && formLogin.controls['password'].touched" class="text-danger">
+                            {{getErrorsMessage('password',formLogin.controls['password'].errors)}}</small>
                         
                         <a href="#">Mot de passe oublié?</a>
                         <button >Se connecter</button>

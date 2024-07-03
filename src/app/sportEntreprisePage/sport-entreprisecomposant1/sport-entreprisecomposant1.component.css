@@ -414,3 +414,33 @@
   h4 {
     font-weight: bold;
   }
+  .wrapper {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    background: url(../../../assets/images/imagepartenairePage/imagecomposant1partenaire/iconcamera.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    background-color: rgba(0, 0, 0, 0.208);
+    margin-right: 20px;
+}
+
+.my_file {
+    position: absolute;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 15px;
+    font-size: 6px;
+    cursor: pointer;
+    width: 80px;
+    height: 100px;
+    transition: 0.5s;
+
+}
+
+.my_file::-webkit-file-upload-button {
+    visibility: hidden;
+}

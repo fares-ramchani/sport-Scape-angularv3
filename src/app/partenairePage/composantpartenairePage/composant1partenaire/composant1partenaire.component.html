@@ -59,10 +59,10 @@
                             </div>
                             <div class="input-box">
 
-                                <input type="text" placeholder="Adresse" formControlName="Adresse" required>
-                                <small *ngIf="partenaireForm.controls['Adresse'].errors && partenaireForm.controls['Adresse'].touched"
+                                <input type="text" placeholder="adresse" formControlName="adresse" required>
+                                <small *ngIf="partenaireForm.controls['adresse'].errors && partenaireForm.controls['adresse'].touched"
                                 class="text-danger">
-                                {{getErrorsMessage('Adresse',partenaireForm.controls['Adresse'].errors)}}</small>
+                                {{getErrorsMessage('adresse',partenaireForm.controls['adresse'].errors)}}</small>
                             </div>
                         </div>
                         <div class="user-details">
@@ -114,24 +114,29 @@
                         </div>
                         <div class="goupwrapper">
                             <div class="wrapper" style="border-radius: 50%;">
-                                <input type="file" class="my_file">
+                                <img  class="my_file" style="width: 100px; height: 100px; padding:0px"  *ngIf="selectedImage1" [src]="selectedImageUrl1" alt="">
+                                <input type="file" (change)="fileChangeimage1($event)" class="my_file">
 
                             </div>
 
                             <div class="wrapper">
-                                <input type="file" class="my_file">
+                                <img  class="my_file" style="width: 100px; height: 100px; padding:0px"  *ngIf="selectedImage2" [src]="selectedImageUrl2" alt="">
+                                <input type="file" (change)="fileChangeimage2($event)" class="my_file">
 
                             </div>
                             <div class="wrapper">
-                                <input type="file" class="my_file">
+                                <img  class="my_file" style="width: 100px; height: 100px; padding:0px"  *ngIf="selectedImage3" [src]="selectedImageUrl3" alt="">
+                                <input type="file" (change)="fileChangeimage3($event)" class="my_file">
 
                             </div>
                             <div class="wrapper">
-                                <input type="file" class="my_file">
+                                <img  class="my_file" style="width: 100px; height: 100px; padding:0px"  *ngIf="selectedImage4" [src]="selectedImageUrl4" alt="">
+                                <input type="file" (change)="filehangeimage4($event)" class="my_file">
 
                             </div>
                             <div class="wrapper">
-                                <input type="file" class="my_file">
+                                <img  class="my_file" style="width: 100px; height: 100px; padding:0px"  *ngIf="selectedImage5" [src]="selectedImageUrl5" alt="">
+                                <input type="file" (change)="filehangeimage5($event)" class="my_file">
 
                             </div>
                         </div>
@@ -173,7 +178,7 @@
                     </div>
                 </div>
                 <div class="button">
-                    <input type="submit" value="Register">
+                    <input (click)="ajouterStade()" type="submit" value="Register">
                 </div>
 
             </div>

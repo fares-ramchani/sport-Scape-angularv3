@@ -49,21 +49,21 @@
                     <div class="title" style="margin-bottom: 30px; font-weight:bold; font-size: 16px; margin-top: 10px;">Contact
                         </div>
                     <div class="content">
-                        <form [formGroup]="sportEntreprise" novalidate>
+                        <form [formGroup]="sportEntreprise" (ngSubmit)="signupPropritaire()" novalidate>
                             <div class="user-details">
                                 <div class="input-box">
                                    
-                                    <input type="text" placeholder="Entreprise" formControlName="Entreprise" required>
-                                    <small *ngIf="sportEntreprise.controls['Entreprise'].errors && sportEntreprise.controls['Entreprise'].touched"
+                                    <input type="text" placeholder="nom" formControlName="nom" required>
+                                    <small *ngIf="sportEntreprise.controls['nom'].errors && sportEntreprise.controls['nom'].touched"
                                     class="text-danger">
-                                    {{getErrorsMessage('Entreprise',sportEntreprise.controls['Entreprise'].errors)}}</small>
+                                    {{getErrorsMessage('nom',sportEntreprise.controls['nom'].errors)}}</small>
                                 </div>
                                 <div class="input-box">
                                   
-                                    <input type="text" placeholder="Responsable" formControlName="Responsable" required>
-                                    <small *ngIf="sportEntreprise.controls['Responsable'].errors && sportEntreprise.controls['Responsable'].touched"
+                                    <input type="text" placeholder="prenom" formControlName="prenom" required>
+                                    <small *ngIf="sportEntreprise.controls['prenom'].errors && sportEntreprise.controls['prenom'].touched"
                                     class="text-danger">
-                                    {{getErrorsMessage('Responsable',sportEntreprise.controls['Responsable'].errors)}}</small>
+                                    {{getErrorsMessage('prenom',sportEntreprise.controls['prenom'].errors)}}</small>
                                 </div>
                             </div>
                             <div class="user-details">
@@ -88,13 +88,29 @@
                            
                             <div class="user-details user-details2" style="margin-bottom: 20px;">
                                 <div class="input-box">
-                                    <input type="text" placeholder="Activité sportive" formControlName="ActivitéSportive" required>
-                                    <small *ngIf="sportEntreprise.controls['ActivitéSportive'].errors && sportEntreprise.controls['ActivitéSportive'].touched"
+                                    <input type="text" placeholder="Activité sportive" formControlName="activiteSportive" required>
+                                    <small *ngIf="sportEntreprise.controls['activiteSportive'].errors && sportEntreprise.controls['activiteSportive'].touched"
                                     class="text-danger">
-                                    {{getErrorsMessage('ActivitéSportive',sportEntreprise.controls['ActivitéSportive'].errors)}}</small>
+                                    {{getErrorsMessage('activiteSportive',sportEntreprise.controls['activiteSportive'].errors)}}</small>
                                 </div>
             
             
+                            </div>
+                            <div class="user-details user-details2" style="margin-bottom: 20px;">
+                                <div class="input-box">
+                                    <input type="text" placeholder="entrepriseee" formControlName="entrepriseee" required>
+                                    <small *ngIf="sportEntreprise.controls['entrepriseee'].errors && sportEntreprise.controls['entrepriseee'].touched"
+                                    class="text-danger">
+                                    {{getErrorsMessage('entrepriseee',sportEntreprise.controls['entrepriseee'].errors)}}</small>
+                                </div>
+            
+            
+                            </div>
+                            <div class="wrapper" style="margin-bottom: 25px;">
+                                <img  class="my_file" style="width: 100px; height: 100px; padding:0px"  *ngIf="selectedLogo" [src]="selectedLogoUrl" alt="">
+                                
+                                <input type="file" (change)="fileChangeLogo($event)" class="my_file">
+
                             </div>
                             <div class="user-details user-details2">
                                 <div class="input-box">

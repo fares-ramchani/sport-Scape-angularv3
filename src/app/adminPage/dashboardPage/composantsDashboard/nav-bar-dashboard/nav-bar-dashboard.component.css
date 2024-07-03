@@ -1,0 +1,447 @@
+.partier {
+    margin-top: 8px;
+    width: 200px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    }
+    h4{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    h6 {
+    font-family: Eina01, sans-serif;
+    font-size: 20px;
+    margin-left: 4%;
+    
+    }
+    
+    .navBar{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, #0f741e, #080808);
+    box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+    
+    }
+    
+    
+    
+    .img1{
+    width: 90px;
+    height: 90px;
+    }
+    
+    .partier1{
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    
+    }
+    .partier2-1{
+        height: 100%;
+        display: flex;
+        align-items: center;
+       
+    }
+    .a{
+       margin-left: 18px;
+       font-size: 18px;
+       font-weight: bold;
+       color: aliceblue;
+       text-decoration: none;
+        
+    }
+    .a1{
+      margin-left: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(14, 15, 15);
+      text-decoration: none;
+       
+    }
+    .partier3{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    }
+    .partier3-1{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+    
+    }
+    
+    .button-77 {
+        max-height: 30px;
+        align-items: center;
+        appearance: none;
+        background-clip: padding-box;
+        background-color: initial;
+        background-image: none;
+        border-style: none;
+        box-sizing: border-box;
+        color:#f7f6f4;
+        cursor: pointer;
+        display: inline-block;
+        flex-direction: row;
+        flex-shrink: 0;
+        justify-content: center;
+        line-height: 24px;
+        margin: 0;
+        min-height: 45px;
+        outline: none;
+        overflow: visible;
+        padding: 19px 13px;
+        pointer-events: auto;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        width: auto;
+        word-break: keep-all;
+        z-index: 0;
+      }
+      .button-77:before,
+    .button-77:after {
+      border-radius: 10px;
+    }
+    
+    .button-77:before {
+      background-color: rgba(249, 57, 19, 0);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -2;
+    }
+    
+    .button-77:after {
+      background-color: rgba(255, 255, 255, 0.579);
+      bottom: 4px;
+      content: "";
+      display: block;
+      left: 4px;
+      overflow: hidden;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      transition: all 100ms ease-out;
+      z-index: -1;
+    }
+    
+    
+    .button-77:hover:not(:disabled):after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      transition-timing-function: ease-in;
+    }
+    
+    .button-77:active:not(:disabled) {
+      color:white;
+      img{
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(303deg) brightness(103%) contrast(101%);
+      }
+    }
+    img:active:not(:disabled) {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(303deg) brightness(103%) contrast(101%);
+    }
+    
+    .button-77:active:not(:disabled):after {
+      background-color: #ffaa00;
+      bottom: 4px;
+      left: 4px;
+      right: 4px;
+      top: 4px;
+    }
+    
+    .button-77:disabled {
+      cursor: default;
+      opacity: .24;
+    }
+    .button-777 {
+        max-height: 20px;
+        align-items: center;
+        appearance: none;
+        background-clip: padding-box;
+        background-color: initial;
+        background-image: none;
+        border-style: none;
+        box-sizing: border-box;
+        color:#f7f6f4;
+        cursor: pointer;
+        display: inline-block;
+        flex-direction: row;
+        flex-shrink: 0;
+        justify-content: center;
+        line-height: 24px;
+        margin: 0;
+        min-height: 45px;
+        outline: none;
+        overflow: visible;
+        padding: 19px 26px;
+        pointer-events: auto;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        width: auto;
+        word-break: keep-all;
+        z-index: 0;
+      }
+      .button-777:before,
+    .button-777:after {
+      border-radius: 10px;
+    }
+    
+    .button-777:before {
+      background-color: rgba(249, 57, 19, 0);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -2;
+    }
+    
+    .button-777:after {
+      background-color: rgb(65, 216, 51);
+      bottom: 4px;
+      content: "";
+      display: block;
+      left: 4px;
+      overflow: hidden;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      transition: all 100ms ease-out;
+      z-index: -1;
+    }
+    .button-777:hover:not(:disabled):after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      transition-timing-function: ease-in;
+    }
+    
+    .button-777:active:not(:disabled) {
+      color:white;
+      img{
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(303deg) brightness(103%) contrast(101%);
+      }
+    }
+    img:active:not(:disabled) {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(303deg) brightness(103%) contrast(101%);
+    }
+    
+    .button-777:active:not(:disabled):after {
+      background-color: #ffaa00;
+      bottom: 4px;
+      left: 4px;
+      right: 4px;
+      top: 4px;
+    }
+    
+    .button-777:disabled {
+      cursor: default;
+      opacity: .24;
+    }
+    a:hover{
+        color: rgb(65, 216, 51) ;
+    }
+    /* @media screen and (max-width:1199px) {
+    
+    .partier2{
+        display: none;
+    }
+    .partier3-1{
+        display: none;
+    }
+    .partier3-2{
+        margin-right: 20px;
+    }
+    
+    } */
+    /* @media screen and (min-width:1200px) {
+        .partier3-2{
+            display: none;
+        }
+        
+        } */
+        .navcollapsse{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          background-color: #3230301b;
+          height: 88vh;
+          position: absolute;
+         
+    
+        }
+        .navcollapsse1{
+          height: 0;
+          transition: all 0.2s ;
+          .partier2collapsse{
+            display: none;
+            
+          }
+          .partier3collapsse{
+            display: none;
+          }
+        }
+        .partier3collapsse{
+          width: 84%;
+        }
+        .partier3-1collapsse{
+          
+          
+        }
+        .itemnavcollapsse{
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          height: 35px;
+          width:fit-content;
+          padding-right: 20px;
+        }
+        .partier2collapsse{
+          width: 84%;
+          background-color: white;
+    
+        }
+    
+    .button-7777 {
+        max-height: 30px;
+        align-items: center;
+        appearance: none;
+        background-clip: padding-box;
+        background-color: initial;
+        background-image: none;
+        border-style: none;
+        box-sizing: border-box;
+        color:#0b0b0b;
+        cursor: pointer;
+        display: inline-block;
+        flex-direction: row;
+        flex-shrink: 0;
+        justify-content: center;
+        line-height: 24px;
+        min-height: 40px;
+        outline: none;
+        overflow: visible;
+        pointer-events: auto;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        width: auto;
+        word-break: keep-all;
+        z-index: 0;
+        background-color: #ffaa00;
+        border-radius: 5px;
+        
+        
+      }
+      
+      
+      
+      
+      .button-7777:before,
+      .button-7777:after {
+        border-radius: 80px;
+      }
+      
+      .button-7777:before {
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+      }
+      
+      .button-7777:after {
+        content: "";
+        bottom: 4px;
+        content: "";
+        display: block;
+        left: 4px;
+        overflow: hidden;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        transition: all 100ms ease-out;
+        z-index: -1;
+      }
+      
+      
+      .button-7777:hover:not(:disabled):after {
+        bottom: 0;
+      
+        left: 0;
+        right: 0;
+        top: 0;
+    
+        transition-timing-function: ease-in;
+      }
+      
+      
+      
+      .button-7777:active:not(:disabled):after {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+      
+      .button-7777:disabled {
+        cursor: default;
+        opacity: .24;
+      }
+      .imgicons{
+        filter: invert(98%) sepia(6%) saturate(366%) hue-rotate(232deg) brightness(117%) contrast(100%);width: 40px; height: 40px;
+      }
+      .imgicons:hover{
+        filter: invert(57%) sepia(78%) saturate(730%) hue-rotate(70deg) brightness(91%) contrast(103%);
+        cursor: pointer;
+      }
+      .imgicons1:hover{
+        filter: invert(57%) sepia(78%) saturate(730%) hue-rotate(70deg) brightness(91%) contrast(103%);
+        cursor: pointer;
+      }
+      .imgicons1{
+        width: 65px; height: 65px; filter: invert(98%) sepia(6%) saturate(366%) hue-rotate(232deg) brightness(117%) contrast(100%);
+      }
+    
+     

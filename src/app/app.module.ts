@@ -25,7 +25,7 @@ import { Composant6Component } from './AccueilPage/composantsAccueil/composant_6
 import { ComposantspartenaireComponent } from './AccueilPage/composantsAccueil/composant_6/composantspartenaire/composantspartenaire.component';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './composants/footer/footer.component';
-import { NavbarComponent } from './composants/navbar/navbar.component';
+
 import { ContactComponent } from './contactPage/contact/contact.component';
 import { LoginComponent } from './loginPage/login/login.component';
 import { Composant1partenaireComponent } from './partenairePage/composantpartenairePage/composant1partenaire/composant1partenaire.component';
@@ -50,6 +50,17 @@ import { CalendrierComponent } from './searshDetailPage/composantsSearshDetail/l
 import { MapComponent } from './map/map.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { DashboardComponent } from './adminPage/dashboardPage/dashboard/dashboard.component';
+import { NavBarDashboardComponent } from './adminPage/dashboardPage/composantsDashboard/nav-bar-dashboard/nav-bar-dashboard.component';
+import { SideBarDashboardComponent } from './adminPage/dashboardPage/composantsDashboard/side-bar-dashboard/side-bar-dashboard.component';
+import { NavbarComponent } from './composants/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GestionDePartenaireComponent } from './adminPage/dashboardPage/gestion-de-partenaire/gestion-de-partenaire.component';
+import { GestionPropritaireDeStadeComponent } from './adminPage/dashboardPage/gestion-propritaire-de-stade/gestion-propritaire-de-stade.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { SearchPropritairePipe } from './pipes/searchs/gestionPropritaireDeStade/search-propritaire.pipe';
+import { GestionDeStadeComponent } from './adminPage/dashboardPage/gestion-de-stade/gestion-de-stade.component';
+
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -91,7 +102,16 @@ registerLocaleData(localeFr);
     Etape3Component,
     FleshTopComponent,
     CalendrierComponent,
-    MapComponent
+    MapComponent,
+    DashboardComponent,
+    NavBarDashboardComponent,
+    SideBarDashboardComponent,
+    GestionDePartenaireComponent,
+    GestionPropritaireDeStadeComponent,
+    SearchPropritairePipe,
+    GestionDeStadeComponent,
+    
+  
   ],
   imports: [
     BrowserModule,
@@ -99,6 +119,8 @@ registerLocaleData(localeFr);
     GoogleMapsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    NgxPaginationModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
   bootstrap: [AppComponent],
