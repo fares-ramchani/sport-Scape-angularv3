@@ -6,7 +6,7 @@
     <div class="f">
         <div class="left">
             <div class="vertical-line"></div>
-            <div class="phrase"><strong>Happy Land - 02</strong><br>
+            <div class="phrase"><strong>{{stade.nomStade}}</strong><br>
                 <div class="star-rating">
                     <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">★</label>
                     <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
@@ -23,7 +23,7 @@
         <div class="detailP">
             <div class="d1">à partir de </div>
             <div class="d1">
-                <div class="prix">72<span style="font-size: 12px;margin-left: 10px;">DT</span></div>
+                <div class="prix">{{activite.prix}}<span style="font-size: 12px;margin-left: 10px;">DT</span></div>
             </div>
         </div>
     </div>
@@ -34,12 +34,12 @@
 
             <div style="height: 50px;" class="bloc">
                 <img src="assets/images/searshDetail/section1/location.png" width="30px" height="35px">
-                <div class="description">BEN AROUS</div>
+                <div class="description">{{stade.ville}}</div>
             </div>
 
             <div style="height: 50px;" class="bloc">
                 <img src="assets/images/searshDetail/section1/foot.png" width="30px" height="30px">
-                <div class="description">FOOTBALL</div>
+                <div class="description">{{nomActivite}}</div>
             </div>
 
             <div style="height: 50px;" class="bloc">
@@ -67,8 +67,7 @@
                 <div class="image"><img src="assets/images/searshDetail/section1/6161.jpg" (click)="openCarousel(3)" class="img-thumbnail"></div>
                 <div class="image"><img src="assets/images/searshDetail/section1/54436.jpg" (click)="openCarousel(4)" class="img-thumbnail"></div>
             </div>
-            <p class="description">🥅 Dimensions du terrain : 50x30📐 De 8h à 00h notre espace est ouvert chaque jour
-                pour vous offrir une expérience mémorable avec votre sport préféré ⚽.</p>
+            <p class="description">{{stade.description}}</p>
         </div>
     </div>
     <div class="section3">

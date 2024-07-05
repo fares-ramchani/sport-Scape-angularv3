@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { CalendrierService } from 'src/app/services/calendrier/calendrier.service';
 @Component({
   selector: 'app-calendrier',
   templateUrl: './calendrier.component.html',
@@ -10,9 +11,10 @@ export class CalendrierComponent implements OnInit {
   currentDate: Date = new Date();
   currentYear: number = this.currentDate.getFullYear();
   currentMonth: string="";
+  day:string=""
   weekDays: { name: string, date: Date }[] = [];
 
-  constructor(private datePipe: DatePipe) { }
+  constructor(private datePipe: DatePipe,private calendrierService:CalendrierService) { }
 
   ngOnInit(): void {
     this.updateCalendar();
@@ -50,8 +52,10 @@ export class CalendrierComponent implements OnInit {
     this.currentDate.setDate(this.currentDate.getDate() + 7);
     this.updateCalendar();
   }
-
- /* isActive(date: Date): boolean {
-    return this.currentDate.toDateString() === date.toDateString();
-  }*/
+  getDay(day:string){
+    this.calendrierService.setData(day)
+  }
+  // isActive(date: Date): boolean {
+  //   return this.currentDate.toDateString() === date.toDateString();
+  // }
 }

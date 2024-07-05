@@ -15,6 +15,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './adminPage/dashboardPage/dashboard/dashboard.component';
 import { GestionPropritaireDeStadeComponent } from './adminPage/dashboardPage/gestion-propritaire-de-stade/gestion-propritaire-de-stade.component';
 import { GestionDeStadeComponent } from './adminPage/dashboardPage/gestion-de-stade/gestion-de-stade.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'sportEntreprise', component: SportEntrepriseComponent },
@@ -23,15 +24,16 @@ const routes: Routes = [
   { path: 'sinup', component: SinupComponent },
   { path: 'partenaire', component: PartenaireComponent },
   { path: 'accueil', component: AccueilComponent },
-  { path: 'search/list', component: SearshComponent },
+  { path: 'search/list/:ville/:activite', component: SearshComponent },
   { path: 'etape1', component: Etape1Component },
   { path: 'etape3', component: Etape3Component },
   { path: 'etape2', component: Etape2Component },
-  { path: 'search/detail', component: SearshDetailComponent },
-  { path: 'Dashboard', component: DashboardComponent ,children:[{ path: 'GestionPropritaireDeStade', component: GestionPropritaireDeStadeComponent },
-    { path: 'GestionDeStade', component: GestionDeStadeComponent }
+  { path: 'search/detail/:id/:activite', component: SearshDetailComponent },
+   { path: 'Dashboard', component: DashboardComponent ,children:[{ path: 'GestionPropritaireDeStade', component: GestionPropritaireDeStadeComponent },
+     { path: 'GestionDeStade', component: GestionDeStadeComponent }
   ]},
   { path: '', component: AccueilComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

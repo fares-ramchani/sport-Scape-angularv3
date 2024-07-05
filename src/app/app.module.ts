@@ -60,6 +60,7 @@ import { GestionPropritaireDeStadeComponent } from './adminPage/dashboardPage/ge
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchPropritairePipe } from './pipes/searchs/gestionPropritaireDeStade/search-propritaire.pipe';
 import { GestionDeStadeComponent } from './adminPage/dashboardPage/gestion-de-stade/gestion-de-stade.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 registerLocaleData(localeFr);
 
@@ -110,7 +111,7 @@ registerLocaleData(localeFr);
     GestionPropritaireDeStadeComponent,
     SearchPropritairePipe,
     GestionDeStadeComponent,
-    
+    NotFoundComponent
   
   ],
   imports: [

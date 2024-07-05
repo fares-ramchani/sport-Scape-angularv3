@@ -6,8 +6,8 @@
                 <div style="color:#333">dans la zone sélectionnée</div>
             </div>
 
-            <div class="blocList">
-                <div class="bloc">
+            <div class="blocList" >
+                <div class="bloc" *ngFor="let detail of detailStade">
                     <div class="imageBloc">
                         <img src="assets/images/searsh/part2/carrousel/6134.jpg" class="image">
                     </div>
@@ -15,8 +15,8 @@
                     <div class="detailBloc">
                         <div class="p1">
                             <div class="logo"><img src="assets/images/searsh/part2/logo/5219.jpg" class="imgLogo"></div>
-                            <div><b style="color: black;">Happy Land - 02</b><br>
-                                FOOTBALL</div>
+                            <div><b style="color: black;">{{detail.nomStade}}</b><br>
+                                {{activite}}</div>
                             <div class="star-rating">
                                 <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
                                     title="1 star">★</label>
@@ -37,8 +37,8 @@
                                     <img style="width:28px;" src="assets/images/searsh/part2/logo/clock.png">
                                 </div>
                                 <div>
-                                    <div class="hours-width" style="color: #72b438;"><b>90</b></div>
-                                    <div class="hours-width">min</div>
+                                    <div class="hours-width" style="color: #72b438;"><b>{{detail.activite.dureeActivite}}</b></div>
+                                    <div class="hours-width"> min</div>
 
                                 </div>
 
@@ -48,7 +48,7 @@
                                     <img style="width:28px;" src="assets/images/searsh/part2/logo/people.png">
                                 </div>
                                 <div>
-                                    <div class="people-width" style="color: #72b438;"><b>14</b></div>
+                                    <div class="people-width" style="color: #72b438;"><b>{{detail.activite.nombreParticipant}}</b></div>
                                     <div class="people-width" style="padding-top: 0px;"> Participants</div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                     <img style="width:28px;" src="assets/images/searsh/part2/logo/marker_green.png">
                                 </div>
                                 <div class="localisation-width">
-                                    <div class="localisation-width"> BEN AROUS </div>
+                                    <div class="localisation-width"> {{ville}} </div>
                                 </div>
                             </div>
 
@@ -67,80 +67,10 @@
                         <div class="p3">
                             <div class="price">
                                 <div style="font-size: 9px;padding-top: 5px;">Prix <b>Dt</b><br>
-                                    <div class="detailPrice">72</div>
+                                    <div class="detailPrice">{{detail.activite.prix}}</div>
                                 </div>
                             </div>
-                            <div class="reserver"><button type="submit" (click)="reserver()">Reserver</button></div>
-                        </div>
-                    </div>
-
-                </div>
-                <hr>
-                
-                <div class="bloc">
-                    <div class="imageBloc">
-                        <img src="assets/images/searsh/part2/carrousel/6134.jpg" class="image">
-                    </div>
-
-                    <div class="detailBloc">
-                        <div class="p1">
-                            <div class="logo"><img src="assets/images/searsh/part2/logo/5219.jpg" class="imgLogo"></div>
-                            <div><b style="color: black;">Happy Land - 02</b><br>
-                                FOOTBALL</div>
-                            <div class="star-rating">
-                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
-                                    title="1 star">★</label>
-                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
-                                    title="2 stars">★</label>
-                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
-                                    title="5 stars">★</label>
-                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
-                                    title="4 stars">★</label>
-                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
-                                    title="3 stars">★</label>
-                            </div>
-                        </div>
-
-                        <div class="p2">
-                            <div ngbtooltip="Durée du match" class="dureeMatch">
-                                <div>
-                                    <img style="width:28px;" src="assets/images/searsh/part2/logo/clock.png">
-                                </div>
-                                <div>
-                                    <div class="hours-width" style="color: #72b438;"><b>90</b></div>
-                                    <div class="hours-width">min</div>
-
-                                </div>
-
-                            </div>
-                            <div ngbtooltip="Nombre de participants" class="participants">
-                                <div>
-                                    <img style="width:28px;" src="assets/images/searsh/part2/logo/people.png">
-                                </div>
-                                <div>
-                                    <div class="people-width" style="color: #72b438;"><b>14</b></div>
-                                    <div class="people-width" style="padding-top: 0px;"> Participants</div>
-                                 </div>
-                            </div>
-
-
-                            <div ngbtooltip="Localisation" class="localisation">
-                                <div class="">
-                                    <img style="width:28px;" src="assets/images/searsh/part2/logo/marker_green.png">
-                                </div>
-                                <div class="localisation-width">
-                                    <div class="localisation-width"> BEN AROUS </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="p3">
-                            <div class="price">
-                                <div style="font-size: 9px;padding-top: 5px;">Prix <b>Dt</b><br>
-                                    <div class="detailPrice">72</div>
-                                </div>
-                            </div>
-                            <div class="reserver"><button type="submit" (click)="reserver()">Reserver</button></div>
+                            <div class="reserver"><button type="submit" (click)="reserver(detail.idStade, activite)">Reserver</button></div>
                         </div>
                     </div>
 
@@ -155,6 +85,7 @@
     <div class="rightSection">
         <div class="map">
             <google-map width="100%" [center]="center" [zoom]="zoom">
+                
             </google-map>
         </div>
     </div>
