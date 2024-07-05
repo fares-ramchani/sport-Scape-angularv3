@@ -1,0 +1,38 @@
+<input class="form-control" type="text" placeholder="search" [(ngModel)]="searchText">
+<div *ngIf="filterTable==0" style="display: flex; flex-direction: column; align-items: center; ">
+    <table class="table table-striped table-hover">
+      
+        <thead>
+            <tr>
+                <th scope="col">idActivite</th>
+                <th scope="col">nomActivite</th>
+                <th scope="col">nombreParticipant</th>
+                <th scope="col">prix</th>
+                <th scope="col">activiteRecommandee</th>
+                <th scope="col">dureeActivite</th>
+               
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of Activite |searchPropritaire:searchText| paginate:{
+                itemsPerPage: cardSize,
+                currentPage: page,
+                totalItems: count
+            };let i = index">
+                <th>{{p.idActivite}}</th>
+                <td>{{p.nomActivite}}</td>
+                <td>{{p.nombreParticipant}}</td>
+                <td>{{p.prix}}</td>
+                <td>{{p.activiteRecommandee}}</td>
+                <td>{{p.dureeActivite}}</td>
+                
+                
+            </tr>
+
+        </tbody>
+
+    </table>
+    <pagination-controls previousLabel="prev" nextLabel="next" (pageChange)="onCardDataChange($event)">
+    </pagination-controls>
+</div>

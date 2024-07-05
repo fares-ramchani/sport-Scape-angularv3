@@ -48,8 +48,8 @@ a {
 
 .bouttom {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid  #FFFFFF;
+    background: linear-gradient(135deg,#0fa96b53,  #0ea61d);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -241,7 +241,7 @@ input {
 
 .social-container a {
 	border: 1px solid #DDDDDD;
-	border-radius: 50%;
+	
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;

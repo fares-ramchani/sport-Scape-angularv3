@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+
 import { AccueilComponent } from './AccueilPage/accueil/accueil.component';
 import { ContactComponent } from './contactPage/contact/contact.component';
 import { LoginComponent } from './loginPage/login/login.component';
@@ -11,6 +11,13 @@ import { SearshDetailComponent } from './searshDetailPage/searsh-detail/searsh-d
 import { SearshComponent } from './searshPage/searsh/searsh.component';
 import { SinupComponent } from './sinupPage/sinup/sinup.component';
 import { SportEntrepriseComponent } from './sportEntreprisePage/sport-entreprise/sport-entreprise.component';
+import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './adminPage/dashboardPage/dashboard/dashboard.component';
+import { GestionPropritaireDeStadeComponent } from './adminPage/dashboardPage/gestion-propritaire-de-stade/gestion-propritaire-de-stade.component';
+import { GestionDeStadeComponent } from './adminPage/dashboardPage/gestion-de-stade/gestion-de-stade.component';
+import { GestionActiviteComponent } from './adminPage/dashboardPage/gestion-activite/gestion-activite.component';
+import { GestionEvennementComponent } from './adminPage/dashboardPage/gestion-evennement/gestion-evennement.component';
+import { AuthGuard } from './guards/guard-authentification.guard';
 
 const routes: Routes = [
   { path: 'sportEntreprise', component: SportEntrepriseComponent },
@@ -24,7 +31,13 @@ const routes: Routes = [
   { path: 'etape3', component: Etape3Component },
   { path: 'etape2', component: Etape2Component },
   { path: 'search/detail', component: SearshDetailComponent },
-  { path: '', redirectTo: '/accueil', pathMatch: 'full' },
+  { path: 'Dashboard', component: DashboardComponent ,canActivate:[AuthGuard], 
+    children:[{ path: 'GestionPropritaireDeStade', component: GestionPropritaireDeStadeComponent },
+    { path: 'GestionDeStade', component: GestionDeStadeComponent },
+    { path: 'GestionActivite', component: GestionActiviteComponent },
+    { path: 'GestionEvennement', component: GestionEvennementComponent }
+  ]},
+  { path: '', component: AccueilComponent },
 ];
 
 @NgModule({

@@ -6,32 +6,49 @@
         <div class="title" style="font-weight:lighter; font-size: 16px; margin-top: 10px;">utilisez votre profil social
             pour vous inscrire</div>
         <div class="button input">
-            <div class="input" style="display: flex; justify-content: center;align-items: center;">
-                <img src="../../../assets/images/imagesloginePage/google-icon.png" width="20px" alt=""
+            <a href="{{url}}" class="input" style="display: flex; justify-content: center;align-items: center;">
+                <img  src="../../../assets/images/imagesloginePage/google-icon.png" width="20px" alt=""
                     style="margin-right: 10px;">
                 Google
-            </div>
+            </a>
 
         </div>
         <div class="title" style="font-weight:lighter; font-size: 16px; margin-top: 10px;">OU</div>
         <div class="content">
-            <form novalidate>
+            <form [formGroup]="AthleteForm" (ngSubmit)="saveAthlete()"novalidate>
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">nom</span>
-                        <input type="text" placeholder="nom" formControlName="ip" required>
+                        <input type="text" placeholder="nom" formControlName="nom" required>
+                        <small *ngIf="AthleteForm.controls['nom'].errors && AthleteForm.controls['nom'].touched"
+                            class="text-danger">
+                            {{getErrorsMessage('nom',AthleteForm.controls['nom'].errors)}}</small>
 
                     </div>
                     <div class="input-box">
                         <span class="details">prenom </span>
-                        <input type="text" placeholder="prenom" formControlName="port" required>
+                        <input type="text" placeholder="prenom" formControlName="prenom" required>
+                        <small *ngIf="AthleteForm.controls['prenom'].errors && AthleteForm.controls['prenom'].touched"
+                            class="text-danger">
+                            {{getErrorsMessage('prenom',AthleteForm.controls['prenom'].errors)}}</small>
 
                     </div>
                 </div>
                 <div class="user-details user-details2">
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="text" placeholder="Email" formControlName="etat" required>
+                        <input type="text" placeholder="Email" formControlName="mail" required>
+                        <small *ngIf="AthleteForm.controls['mail'].errors && AthleteForm.controls['mail'].touched"
+                            class="text-danger">
+                            {{getErrorsMessage('mail',AthleteForm.controls['mail'].errors)}}</small>
+
+                    </div>
+                    <div class="input-box">
+                        <span class="details">téléphone</span>
+                        <input type="text" placeholder="Tel" formControlName="telephone" required>
+                        <small *ngIf="AthleteForm.controls['telephone'].errors && AthleteForm.controls['telephone'].touched"
+                            class="text-danger">
+                            {{getErrorsMessage('telephone',AthleteForm.controls['telephone'].errors)}}</small>
 
                     </div>
 
@@ -40,7 +57,10 @@
                 <div class="user-details user-details2">
                     <div class="input-box">
                         <span class="details">Mot de passe</span>
-                        <input type="text" placeholder="Mot de passe" formControlName="etat" required>
+                        <input type="text" placeholder="Mot de passe" formControlName="motDePasse" required>
+                        <small *ngIf="AthleteForm.controls['motDePasse'].errors && AthleteForm.controls['motDePasse'].touched"
+                            class="text-danger">
+                            {{getErrorsMessage('motDePasse',AthleteForm.controls['motDePasse'].errors)}}</small>
 
                     </div>
 
@@ -51,8 +71,9 @@
                 </div>
 
             </form>
-            <div class="title" style="font-weight:lighter; font-size: 16px; margin-top: 10px;">Déjà inscrit? 
-                <span style="margin-left: 5px;"><a routerLink="/login"> S'identifier</a></span></div>
+            <div class="title" style="font-weight:lighter; font-size: 16px; margin-top: 10px;">Déjà inscrit?
+                <span style="margin-left: 5px;"><a routerLink="/login"> S'identifier</a></span>
+            </div>
         </div>
     </div>
 </body>

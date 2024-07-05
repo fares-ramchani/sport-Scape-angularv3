@@ -26,13 +26,17 @@
                 <a class="a" routerLink="/partenaire"> Devenez partenaire</a>
                 
             </div>
+            <div *ngIf="role=='ADMIN'">
+                <a class="a" routerLink="/Dashboard/GestionPropritaireDeStade"> Espace Admine</a>
+                
+            </div>
 
 
         </div>
 
     </div>
     <div class="partier3">
-        <div class="partier3-1">
+        <div *ngIf="isAuthenticated=='false'" class="partier3-1">
             <div class="button-77" style="display: flex; justify-content: center; align-items: center;">
                 <img style="width: 40ox; height: 40px;" src="../../../assets/images/imagesnavBar/iconperson.png" alt="">
                 <h4 style="margin-top: 5px;"><a routerLink="/login" style="text-decoration: none; color: white;">Se connecter</a></h4>
@@ -40,6 +44,26 @@
             <div class="button-777" style="display: flex; justify-content: center; align-items: center;">
                 <h4 style="margin-top: 5px;"> <a routerLink="/sinup" style="text-decoration: none; color: white;">S'inscrire</a></h4>
             </div>
+        </div>
+        <div *ngIf="isAuthenticated=='true'" class="partier3-1">
+            <div  style="display: flex; justify-content: center; align-items: center; margin-right: 25px;">
+                <img  class="imgicons"  src="../../../../../assets/images/imagesdashbordPage/imageNavBarDashBord/messageIcons.png" alt="">
+
+            </div>
+            <div  style="display: flex; justify-content: center; align-items: center; margin-right: 25px;">
+                <img   class="imgicons"  src="../../../../../assets/images/imagesdashbordPage/imageNavBarDashBord/notificationIcons (2).png" alt="">
+
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; margin-right: 25px;">
+                <img *ngIf="imageurl" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;" [src]="imageurl" alt="...">
+                <img *ngIf="!imageurl" class="imgicons1"  src="../../../assets/images/imagesnavBar/iconperson.png" alt="">
+                <h4 style="margin-top: 15px; color: white;"><span>{{username}}</span></h4>
+            </div>
+            <div class="button-777" style="display: flex; justify-content: center; align-items: center;" (click)="logout()">
+                <h4 style="margin-top: 5px;"> Logout</h4>
+            </div>
+          
+           
         </div>
         <div class="partier3-2">
             <div (click)=" closepopup()" class="button-7777 ">
@@ -75,20 +99,45 @@
             <div class="itemnavcollapsse">
                 <a class="a1" routerLink="/partenaire"> Devenez partenaire</a>
             </div>
+            <div *ngIf="role=='ADMIN'">
+                <a class="a" routerLink="/Dashboard/GestionPropritaireDeStade"> Espace Admine</a>
+                
+            </div>
 
 
         </div>
 
     </div>
     <div class="partier3collapsse">
-        <div class="partier3-1collapsse">
+        <div *ngIf="isAuthenticated=='false'" class="partier3-1collapsse">
             <div class="button-77" style="display: flex; justify-content: center; align-items: center;">
                 <img style="width: 40ox; height: 40px;" src="../../../assets/images/imagesnavBar/iconperson.png" alt="">
-                <h4 style="color: black; margin-top: 5px;">Se connecter</h4>
+                <h4 style="margin-top: 5px;"><a routerLink="/login" style="text-decoration: none; color: white;">Se connecter</a></h4>
             </div>
             <div class="button-777" style="display: flex; justify-content: center; align-items: center;">
-                <h4 style="margin-top: 5px;">S'inscrire</h4>
+                <h4 style="margin-top: 5px;"> <a routerLink="/sinup" style="text-decoration: none; color: white;">S'inscrire</a></h4>
             </div>
+        </div>
+        <div *ngIf="isAuthenticated=='true'" class="partier3-1collapsse1">
+            <div class="button-777" style="display: flex; justify-content: center; align-items: center;" (click)="logout()">
+                <h4 style="margin-top: 5px;"> Logout    </h4>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;margin-left: 10px; margin-right: 25px;">
+                <img *ngIf="imageurl" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;" [src]="imageurl" alt="...">
+                <img *ngIf="!imageurl" class="imgicons1"  src="../../../assets/images/imagesnavBar/iconperson.png" alt="">
+                <h4 style="margin-top: 15px; color: black;"><span>{{username}}</span></h4>
+            </div>
+            <div  style="display: flex; justify-content: center; align-items: center; margin-right: 25px;">
+                <img  class="imgicons2"  src="../../../../../assets/images/imagesdashbordPage/imageNavBarDashBord/messageIcons.png" alt="">
+
+            </div>
+            <div  style="display: flex; justify-content: center; align-items: center; margin-right: 25px;">
+                <img   class="imgicons2"  src="../../../../../assets/images/imagesdashbordPage/imageNavBarDashBord/notificationIcons (2).png" alt="">
+
+            </div>
+            
+          
+           
         </div>
 
 
