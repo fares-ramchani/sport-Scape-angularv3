@@ -6,7 +6,7 @@
       </div>
       <div class="weekdays">
         <div *ngFor="let day of weekDays">
-            <button class="jour">
+            <button class="jour" (click)="getDay(day.name)">
           <div>{{ day.name }}</div>
           <div>{{ day.date | date: 'd MMMM' }}</div>
         </button>

@@ -65,6 +65,7 @@ import { GestionEvennementComponent } from './adminPage/dashboardPage/gestion-ev
 import { AppHttpInterceptor } from './interceptor/app-http.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 registerLocaleData(localeFr);
 
@@ -118,6 +119,7 @@ registerLocaleData(localeFr);
     GestionActiviteComponent,
     GestionEvennementComponent,
     
+    NotFoundComponent
   
   ],
   imports: [

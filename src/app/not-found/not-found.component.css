@@ -1,0 +1,97 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+.error {
+    background-image: url("/assets/images/notFound/download.jpg");
+    height: 670px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding-top: 115px;
+}
+
+.main button {
+    background-color: #72b438;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    width: 15%;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    overflow: clip;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.main button {
+    background-color: #72b438;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.ooops {
+    font-size: 80px;
+    color: #fff;
+}
+
+.description {
+    font-size: 18px;
+    color: #fff;
+    width: 85%;
+    margin-left: 8%;
+}
+
+.main button img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .error {
+        height: 900px;
+    }
+    .main{
+        margin-top: 130px;
+    }
+    .main button{
+        background-color: #72b438;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+    .ooops{
+        font-size: 80px;
+        color: #fff;
+    }
+    .description{
+        font-size: 18px;
+        color: #fff;
+        width: 85%;
+        margin-left: 8%;
+    }
+    .main button img{
+        margin-right: 10px;
+        width: 20px;
+    }
+}

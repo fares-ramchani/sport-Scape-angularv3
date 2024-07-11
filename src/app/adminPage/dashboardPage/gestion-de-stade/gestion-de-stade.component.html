@@ -9,7 +9,7 @@
                 src="../../../../assets/images/accueil/composant3/imageactivite/football.png" alt="">
             <h6 style="margin-top: 20px; color: black; font-weight: 400;">Nombre de Stade:{{nombreDestadeFootball}}</h6>
             <p style="margin-top: 20px;" class="card-text"><small
-                    class="text-muted"></small>{{nombreDestadeFootball/nombreDestadel*100}}%</p>
+                    class="text-muted"></small>{{nombreDestadeFootball/nombreDestadel*100 |number: '1.1-1'}}%</p>
         </div>
     </div>
     <div class="card border-success shadow ima3"  style=" margin-right: 10px;" (click)="filterparActiviteHandball()">
@@ -19,7 +19,7 @@
                 src="../../../../assets/images/accueil/composant3/imageactivite/handball.png" alt="">
                 <h6 style="margin-top: 20px; color: black; font-weight: 400;">Nombre de Stade:{{nombreDestadeHandball}}</h6>
                 <p style="margin-top: 20px;" class="card-text"><small
-                        class="text-muted"></small>{{nombreDestadeHandball/nombreDestadel*100}}%</p>
+                        class="text-muted"></small>{{nombreDestadeHandball/nombreDestadel*100|number: '1.1-1'}}%</p>
         </div>
     </div>
     <div class="card border-success shadow ima3"style=" margin-right: 10px;" (click)="filterparActiviteBasketBall()">
@@ -29,7 +29,7 @@
                 src="../../../../assets/images/accueil/composant3/imageactivite/basketball.png" alt="">
                 <h6 style="margin-top: 20px; color: black; font-weight: 400;">Nombre de Stade:{{nombreDestadeBasketBall}}</h6>
                 <p style="margin-top: 20px;" class="card-text"><small
-                        class="text-muted"></small>{{nombreDestadeBasketBall/nombreDestadel*100}}%</p>
+                        class="text-muted"></small>{{nombreDestadeBasketBall/nombreDestadel*100|number: '1.1-1'}}%</p>
         </div>
     </div>
     <div class="card border-success shadow ima3"style=" margin-right: 10px;" (click)="filterparActiviteVolleyball()">
@@ -39,7 +39,7 @@
                 src="../../../../assets/images/accueil/composant3/imageactivite/volleyball.png" alt="">
                 <h6 style="margin-top: 20px; color: black; font-weight: 400;">Nombre de Stade:{{nombreDestadeVolleyball}}</h6>
                 <p style="margin-top: 20px;" class="card-text"><small
-                        class="text-muted"></small>{{nombreDestadeVolleyball/nombreDestadel*100}}%</p>
+                        class="text-muted"></small>{{nombreDestadeVolleyball/nombreDestadel*100|number: '1.1-1'}}%</p>
         </div>
     </div>
     <div class="card border-success shadow ima3"style=" margin-right: 10px;" (click)="filterparActiviteSwimmingl()">
@@ -49,7 +49,7 @@
                 src="../../../../assets/images/accueil/composant3/imageactivite/natation.png" alt="">
                 <h6 style="margin-top: 20px; color: black; font-weight: 400;">Nombre de Stade:{{nombreDesstadeSwimming}}</h6>
                 <p style="margin-top: 20px;" class="card-text"><small
-                        class="text-muted"></small>{{nombreDesstadeSwimming/nombreDestadel*100}}%</p>
+                        class="text-muted"></small>{{nombreDesstadeSwimming/nombreDestadel*100|number: '1.1-1'}}%</p>
         </div>
     </div>
     <div class="card border-success shadow ima3"style=" margin-right: 10px;" (click)="toutStade()">

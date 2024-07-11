@@ -18,6 +18,7 @@ import { GestionDeStadeComponent } from './adminPage/dashboardPage/gestion-de-st
 import { GestionActiviteComponent } from './adminPage/dashboardPage/gestion-activite/gestion-activite.component';
 import { GestionEvennementComponent } from './adminPage/dashboardPage/gestion-evennement/gestion-evennement.component';
 import { AuthGuard } from './guards/guard-authentification.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'sportEntreprise', component: SportEntrepriseComponent },
@@ -26,22 +27,25 @@ const routes: Routes = [
   { path: 'sinup', component: SinupComponent },
   { path: 'partenaire', component: PartenaireComponent },
   { path: 'accueil', component: AccueilComponent },
-  { path: 'search/list', component: SearshComponent },
+  { path: 'search/list/:ville/:activite', component: SearshComponent },
   { path: 'etape1', component: Etape1Component },
   { path: 'etape3', component: Etape3Component },
   { path: 'etape2', component: Etape2Component },
-  { path: 'search/detail', component: SearshDetailComponent },
-  { path: 'Dashboard', component: DashboardComponent ,canActivate:[AuthGuard], 
-    children:[{ path: 'GestionPropritaireDeStade', component: GestionPropritaireDeStadeComponent },
+  {
+    path: 'Dashboard', component: DashboardComponent, canActivate: [AuthGuard],
+    children: [{ path: 'GestionPropritaireDeStade', component: GestionPropritaireDeStadeComponent },
     { path: 'GestionDeStade', component: GestionDeStadeComponent },
     { path: 'GestionActivite', component: GestionActiviteComponent },
     { path: 'GestionEvennement', component: GestionEvennementComponent }
-  ]},
+    ]
+  },
+  { path: 'search/detail/:id/:activite', component: SearshDetailComponent },
   { path: '', component: AccueilComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

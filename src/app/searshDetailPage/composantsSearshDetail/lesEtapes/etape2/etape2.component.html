@@ -1,121 +1,3 @@
-<!-- <div class="container">
-    <div class="steps">
-        <div class="step"><span style="padding-right: 5px;"><i class="bi bi-calendar-date"></i></span>ÉTAPE <br> CHOISIR UN CRÉNEAU
-        </div>
-        <div class="step active"><span style="padding-right: 5px;"><i class="bi bi-person-circle"></i></span>ÉTAPE <br> SE
-            CONNECTER OU S'INSCRIRE</div>
-        <div class="step"><span style="padding-right: 5px;"><i class="bi bi-credit-card"></i></span>ÉTAPE <br> FINALISER LA
-            RÉSERVATION</div>
-    </div>
-
-    <div class="card-container">
-        <div class="card n1">
-            <h5 class="moyenPayment" style="color: black;">Votre réservation</h5>
-            <div class="oneElement">
-                <h6 class="card-subtitle mb-2 text-muted">Espace de la réservation</h6>
-                <h5 class="card-title colorTitleCard">Soccer Club - SC1</h5>
-            </div>
-
-            <div class="oneElement">
-                <h6 class="card-subtitle mb-2 text-muted">Date de réservation</h6>
-                <h5 class="card-title colorTitleCard">2024-06-27</h5>
-            </div>
-            <div class="oneElement">
-                <h6 class="card-subtitle mb-2 text-muted">Heure de réservation</h6>
-                <h5 class="card-title colorTitleCard">13:00 - 14:15</h5>
-            </div>
-            <div class="price-detail">
-                <h5 class="moyenPayment" style="color: black;">Détails du prix</h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                    <span style="width: 65%;">Prix de la réservation</span>
-                    <span class="price-style">70 DT</span>
-                </h6>
-                <h6 class="card-subtitle mb-2 text-muted">
-                    <span style="width: 85%;">Frais de la transaction<i class="bi bi-info-circle-fill"
-                            style="padding-left: 5px;" (click)="descrip()"></i></span>
-                    <span class="price-style">0.71 DT</span>
-                </h6>
-                <h5 class="card-title text-muted total-price">
-                    <span style="width: 65%;">Total</span>
-                    <span class="price-style colorTitleCard">70.71 DT</span>
-                </h5>
-            </div>
-        </div>
-
-        <div class="card n2">
-            <div class="form-wrapper">
-                <h2 class="heading-5">Bienvenue à nouveau</h2>
-                <div class="form-box">
-                    <h3 class="heading-6">Utilisez votre profil social pour vous inscrire</h3>
-                    <div class="social-box">
-                        <a class="social-login w-inline-block cursorPointer" style="width: 100%;">
-                            <img class="image-13" src="assets/images/searshDetail/section1/google.png"
-                                alt="Google Icon" />
-                            <div class="div-block-42">
-                                <div class="text-block-9">Google</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="div-block-6-copy">
-                        <div class="_1px-div-line"></div>
-                        <h3 class="heading-6">Ou</h3>
-                        <div class="_1px-div-line"></div>
-                    </div>
-                    <div class="w-form">
-                        <form novalidate role="form" class="ng-untouched ng-pristine ng-valid">
-                            <div class="form-field-wrapper">
-                                <div class="text-field-box">
-                                    <label class="field-label-3" for="name">Name</label>
-                                </div>
-                                <div class="text-field-box">
-                                    <label class="field-label-3" for="Name">Last Name</label>
-                                </div>
-                                <div class="text-field-box _2">
-                                    <label class="field-label-3" for="Email">Email</label>
-                                    <input
-                                        class="text-field-2 form-control w-input-log ng-untouched ng-pristine ng-valid"
-                                        formcontrolname="username" id="username" name="username" type="text"
-                                        placeholder="Votre nom d'utilisateur">
-                                </div>
-                                <div class="text-field-box _2">
-                                    <label class="field-label-3" for="Password">Password</label>
-                                    <span class="password-section">
-                                        <input
-                                            class="text-field-2 form-control w-input-log ng-untouched ng-pristine ng-valid"
-                                            formcontrolname="password" id="password" name="password" type="password"
-                                            placeholder="Mot de passe">
-                                        <span class="eye-show">
-                                            <i class="bi bi-eye-fill"></i>
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                            <button class="button-4 registration w-button" type="submit">Se connecter</button>
-                        </form>
-                    </div>
-                    <div class="div-block-41">
-                        <div class="text-block-8" style="margin-top: -22px;">
-                            <a class="link-3 cursorPointer" style="color:black">Mot de passe oublié ?</a>
-                            <a class="link-3">S'inscrire</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="info-box" *ngIf="verif==true">
-        Ces frais représentent les commissions de la banque ou la poste ainsi que la société qui assure le
-        paiement en ligne
-    </div>
-    <div class="step-navigation">
-        <button id="previous-step" class="btn btn-light">
-            <span class="btn-icon">&larr;</span> ÉTAPE PRÉCÉDENTE
-        </button>
-        <button id="next-step" class="btn btn-light">
-            ÉTAPE SUIVANTE <span class="btn-icon">&rarr;</span>
-        </button>
-    </div>
-</div> -->
 <!-- <div class="container"> -->
     <div *ngIf="currentSection === 'etape2'" class="etape2">
         <div class="steps">
@@ -135,7 +17,7 @@
                 <h5 class="moyenPayment" style="color: black;">Votre réservation</h5>
                 <div class="oneElement">
                     <h6 class="card-subtitle mb-2 text-muted">Espace de la réservation</h6>
-                    <h5 class="card-title colorTitleCard">Soccer Club - SC1</h5>
+                    <h5 class="card-title colorTitleCard">{{stade.nomStade}}</h5>
                 </div>
     
                 <div class="oneElement">
@@ -144,13 +26,13 @@
                 </div>
                 <div class="oneElement">
                     <h6 class="card-subtitle mb-2 text-muted">Heure de réservation</h6>
-                    <h5 class="card-title colorTitleCard">13:00 - 14:15</h5>
+                    <h5 class="card-title colorTitleCard">{{donnerEtape1.debutSeance}} - {{donnerEtape1.finSeance}}</h5>
                 </div>
                 <div class="price-detail">
                     <h5 class="moyenPayment" style="color: black;">Détails du prix</h5>
                     <h6 class="card-subtitle mb-2 text-muted">
                         <span style="width: 65%;">Prix de la réservation</span>
-                        <span class="price-style">70 DT</span>
+                        <span class="price-style">{{activite.prix}} DT</span>
                     </h6>
                     <h6 class="card-subtitle mb-2 text-muted">
                         <span style="width: 85%;">Frais de la transaction<i class="bi bi-info-circle-fill"
@@ -159,7 +41,7 @@
                     </h6>
                     <h5 class="card-title text-muted total-price">
                         <span style="width: 65%;">Total</span>
-                        <span class="price-style colorTitleCard">70.71 DT</span>
+                        <span class="price-style colorTitleCard">{{totalPrice}} DT</span>
                     </h5>
                 </div>
             </div>

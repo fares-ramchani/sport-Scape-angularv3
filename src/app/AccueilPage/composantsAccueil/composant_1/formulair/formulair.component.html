@@ -10,12 +10,8 @@
                 <div class="form-group">
                     <div class="form1">
                         <p>Gouvernorat</p>
-                        <select class="form-control" formControlName="Gouvernorat">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select class="form-control" formControlName="Gouvernorat" (change)="onVilleChange($event)">
+                            <option  *ngFor="let stade of ToutLesStade" [value]="stade.ville">{{stade.ville}}</option>
                         </select>
                         <small *ngIf="formulaireaccueilForm.controls['Gouvernorat'].errors && formulaireaccueilForm.controls['Gouvernorat'].touched"
                                 class="text-danger">
@@ -24,12 +20,8 @@
                     <div class="form2">
                         <div style="width: 70%;">
                             <p>Activité</p>
-                            <select class="form-control" formControlName="Activite">
-                                <option>FOOTBALL</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select class="form-control" formControlName="Activite" (change)="onActiviteChange($event)">
+                                <option *ngFor="let activitie of activities" [value]="activitie.nomActivite">{{activitie.nomActivite}}</option>
                             </select>
                             <small *ngIf="formulaireaccueilForm.controls['Activite'].errors && formulaireaccueilForm.controls['Activite'].touched"
                                 class="text-danger">
@@ -41,7 +33,7 @@
                         </div>
                     </div>
                     <div>
-                        <button><img src="/assets/images/accueil/composant1/searchicon.png">Recherche</button>
+                        <button (click)="search()"><img src="/assets/images/accueil/composant1/searchicon.png">Recherche</button>
                     </div>
                 </div>
             </form>

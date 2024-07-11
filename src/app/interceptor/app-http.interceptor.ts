@@ -20,6 +20,12 @@ export class AppHttpInterceptor implements HttpInterceptor {
     &&!request.url.includes("/auth/AcessToken")
     &&!request.url.includes("/propritaire/ajouterPropritaire")
     &&!request.url.includes("/propritaire/VerifierCompte")
+    &&!request.url.includes("/stade/getToutLesStades")
+    &&!request.url.includes("/stade/getStadeByIdAndActivite")
+    &&!request.url.includes("/stade/getStadeById")
+    &&!request.url.includes("/stade/getStadeByVilleAndActivite")
+    &&!request.url.includes("/activite")
+    &&!request.url.includes("/Seances")
     &&!request.url.includes("/stripe/payment")
     ) {
       let newRequest = request.clone({

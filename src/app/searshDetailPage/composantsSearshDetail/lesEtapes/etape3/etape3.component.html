@@ -16,11 +16,11 @@
                     <h4 style="color: black;">Votre réservation</h4>
                     <hr>
                     <h6>Espace de la réservation</h6>
-                    <h5>FS Stadium - INTER</h5>
+                    <h5>{{stade.nomStade}}</h5>
                     <h6>Date de réservation</h6>
-                    <h5>2024-06-27</h5>
+                    <h5>2024-07-05</h5>
                     <h6>Heure de réservation</h6>
-                    <h5>14:00 - 15:30</h5>
+                    <h5>{{donnerEtape1.debutSeance}}H - {{donnerEtape1.finSeance}}H</h5>
                 </div>
                 <div class="prix">
                     <h4 style="color: black;">Détails du prix</h4>
@@ -30,7 +30,7 @@
                             <p>Prix de la réservation</p>
                         </div>
                         <div>
-                            <p>75 DT</p>
+                            <p>{{activite.prix}} DT</p>
                         </div>
                     </div>
                     <div class="detailprix">
@@ -44,7 +44,7 @@
                             </p>
                         </div>
                         <div>
-                            <p>0.76 DT</p>
+                            <p>0.71 DT DT</p>
                         </div>
                     </div>
                     <div class="detailprix">
@@ -73,11 +73,11 @@
                             <h6> Total</h6>
                         </div>
                         <div>
-                            <h5>75.76 DT</h5>
+                            <h5>{{totalPrice}} DT</h5>
                         </div>
                     </div>
                 </div>
-
+                <button class="buttonpayer" (click)="reserver()">{{totalPrice}} DT</button>
             </div>
             <div class="middleside"></div>
             <div class="rightside">
